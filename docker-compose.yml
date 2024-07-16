@@ -1,0 +1,16 @@
+version: '3.0'
+services:
+  barista-service:
+    image: sushmagowda321/baristacafe
+    ports:
+      - 11:80
+
+  health-service:
+    image: sushmagowda321/healthapp
+    ports:
+      - 12:80
+
+ finance-service:
+   image: sushmagowda321/financeapp
+   ports:
+     - 13:80
