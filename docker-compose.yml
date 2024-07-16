@@ -10,7 +10,7 @@ services:
     ports:
       - 12:80
 
- finance-service:
+  finance-service:
    image: sushmagowda321/financeapp
    ports:
      - 13:80
