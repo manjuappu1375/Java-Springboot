@@ -36,7 +36,7 @@ pipeline {
             steps {
              script {
                  withDockerRegistry(credentialsId: 'docker-cred', toolName: 'docker') {
-                    sh 'docker build -t spring-boot .'
+                    sh 'docker build -t spring .'
                   }
               }
             }
@@ -45,8 +45,8 @@ pipeline {
             steps {
              script {
                 withDockerRegistry(credentialsId: 'docker-cred', toolName: 'docker') {
-                    sh 'docker tag spring-boot sushmagowda321/cicdapp:1.0'
-                    sh 'docker push sushmagowda321/cicdapp:1.0'
+                    sh 'docker tag spring sushmagowda321/demoapp:1.0'
+                    sh 'docker push sushmagowda321/demoapp:1.0'
                   }
               }
             }
@@ -55,7 +55,7 @@ pipeline {
             steps {
              script {
                    withDockerRegistry(credentialsId: 'docker-cred', toolName: 'docker') {
-                    sh 'docker run -itd --name java-container -p 15:8080 spring-boot'
+                    sh 'docker run -itd --name demo-container -p 56:8080 spring'
                   }
               }
             }
