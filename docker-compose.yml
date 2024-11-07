@@ -1,6 +1,0 @@
-version: '3.0'
-services:
-  java-spring:
-    image: sushmagowda321/java-spring
-    ports:
-      - 8081:8081
