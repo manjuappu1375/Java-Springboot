@@ -62,17 +62,7 @@ pipeline {
                   }
               }
             }
-        }
-        stage('docker compose') {
-            steps {
-             script {
-                 withDockerRegistry(credentialsId: 'docker-cred', toolName: 'docker') {
-                    sh 'docker-compose up -d'
-                  }
-              }
-            }
-        }
-
+        }    
     }	
  
     post {
